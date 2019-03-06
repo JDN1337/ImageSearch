@@ -20,8 +20,18 @@ class ImageSearchViewController: UIViewController {
 
     static var nbItemsByLine = CGFloat(2)
 
+    init() {
+        super.init(nibName: ImageSearchViewController.nibName, bundle: Bundle.main)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.hero.isEnabled = true
 
         self.searchBar.delegate = self
 
@@ -46,20 +56,18 @@ class ImageSearchViewController: UIViewController {
         self.spinner.isHidden = false
 
         self.viewModel.loadImagesWithText(self.searchBar.text) { [weak self] (success) in
-            DispatchQueue.main.async {
-                if success {
-                    //Reset emptyLabel
-                    self?.emptyLabel.text = "Veuillez saisir une recherche..."
-                    self?.emptyLabel.textColor = .black
-                } else {
-                    //Show error on emptyLabel
-                    self?.emptyLabel.text = "Erreur lors du chargement des images."
-                    self?.emptyLabel.textColor = .red
-                }
-
-                self?.refreshDisplay()
-                self?.refreshControl.endRefreshing()
+            if success {
+                //Reset emptyLabel
+                self?.emptyLabel.text = "Veuillez saisir une recherche..."
+                self?.emptyLabel.textColor = .darkGray
+            } else {
+                //Show error on emptyLabel
+                self?.emptyLabel.text = "Erreur lors du chargement des images."
+                self?.emptyLabel.textColor = .red
             }
+
+            self?.refreshDisplay()
+            self?.refreshControl.endRefreshing()
         }
     }
 
@@ -110,5 +118,14 @@ extension ImageSearchViewController: UICollectionViewDelegate, UICollectionViewD
         }
 
         return UICollectionViewCell()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+
+        //Show detailVC
+        let imageDetailVM = ImageDetailViewModel(unsplashImage: self.viewModel.images[indexPath.item])
+        let imageDetailVC = ImageDetailViewController(viewModel: imageDetailVM)
+        self.navigationController?.pushViewController(imageDetailVC, animated: true)
     }
 }

@@ -41,12 +41,14 @@ class ApiManager {
         let session = URLSession(configuration: config)
 
         let task = session.dataTask(with: request) { (data, response, error) -> Void in
-            if let httpResponse = response as? HTTPURLResponse {
-                print("end request - \(requestUrl)")
-                completion(data, error, httpResponse.allHeaderFields)
-            } else {
-                print("end request - \(requestUrl) - With Error : \(error?.localizedDescription ?? "")")
-                completion(data, error, nil)
+            DispatchQueue.main.async {
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("end request - \(requestUrl)")
+                    completion(data, error, httpResponse.allHeaderFields)
+                } else {
+                    print("end request - \(requestUrl) - With Error : \(error?.localizedDescription ?? "")")
+                    completion(data, error, nil)
+                }
             }
         }
         task.resume()

@@ -35,8 +35,17 @@ class UnsplashImageParser {
 
     static func images(jsonDic: JSON) throws -> UnsplashImage {
         let image = UnsplashImage()
+        image.id = jsonDic["id"].stringValue
         image.urlString = jsonDic["urls"]["regular"].stringValue
         image.description = jsonDic["description"].stringValue
+
+        //Dates
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+
+        image.createdAt = dateFormatter.date(from: jsonDic["created_at"].stringValue)
+        image.updatedAt = dateFormatter.date(from: jsonDic["updated_at"].stringValue)
+
         return image
     }
     

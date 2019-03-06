@@ -9,11 +9,33 @@
 import Foundation
 
 class UnsplashImage {
-    var urlString: String
-    var description: String
+    var id = ""
+    var urlString = ""
+    var description = ""
+    var createdAt: Date?
+    var updatedAt: Date?
+}
 
-    init(urlString: String = "", description: String = "") {
-        self.urlString = urlString
-        self.description = description
+extension UnsplashImage {
+    var createdAtString: String {
+        if let createdAt = self.createdAt {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+
+            return dateFormatter.string(from: createdAt)
+        } else {
+            return ""
+        }
+    }
+
+    var updatedAtString: String {
+        if let updatedAt = self.updatedAt {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+
+            return dateFormatter.string(from: updatedAt)
+        } else {
+            return ""
+        }
     }
 }

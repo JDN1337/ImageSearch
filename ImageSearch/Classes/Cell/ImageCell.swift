@@ -18,6 +18,7 @@ class ImageCell: UICollectionViewCell {
 
     static let nibName = "ImageCell"
     static let reuseIdentifier = "ImageCellReuseId"
+    static let baseImageViewHeroId = "imageViewHeroId"
 
     var viewModel: ImageCellViewModel! {
         didSet {
@@ -33,6 +34,8 @@ class ImageCell: UICollectionViewCell {
     }
 
     private func config() {
+        self.imageView.hero.id = "\(ImageCell.baseImageViewHeroId)-\(self.viewModel.unsplashImage.id)"
+
         if let url = URL(string: self.viewModel.unsplashImage.urlString) {
             self.imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "imageSearch"))
         } else {

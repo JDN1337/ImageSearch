@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		56333C36CD45782018FBB347 /* Pods_ImageSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6677E1A5C6F833726D2D6E7 /* Pods_ImageSearchTests.framework */; };
+		5D3AA555222FD6F700CEE266 /* ImageSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AA554222FD6F700CEE266 /* ImageSearchViewController.xib */; };
+		5D3AA556222FD6F700CEE266 /* ImageSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AA554222FD6F700CEE266 /* ImageSearchViewController.xib */; };
+		5D3AA557222FD6F700CEE266 /* ImageSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AA554222FD6F700CEE266 /* ImageSearchViewController.xib */; };
+		5D3AA559222FD7F400CEE266 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA558222FD7F400CEE266 /* LaunchScreenViewController.swift */; };
+		5D3AA55A222FD7F400CEE266 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA558222FD7F400CEE266 /* LaunchScreenViewController.swift */; };
+		5D3AA55B222FD7F400CEE266 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA558222FD7F400CEE266 /* LaunchScreenViewController.swift */; };
+		5D3AA55F222FD96B00CEE266 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA55E222FD96B00CEE266 /* UIViewController+Extension.swift */; };
+		5D3AA560222FD96B00CEE266 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA55E222FD96B00CEE266 /* UIViewController+Extension.swift */; };
+		5D3AA561222FD96B00CEE266 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA55E222FD96B00CEE266 /* UIViewController+Extension.swift */; };
+		5D3AA564222FDCDD00CEE266 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5D221FF9B500663D37 /* ImageSearchViewController.swift */; };
+		5D3AA565222FDCDD00CEE266 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5D221FF9B500663D37 /* ImageSearchViewController.swift */; };
+		5D3AA567222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */; };
+		5D3AA568222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */; };
+		5D3AA569222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */; };
+		5D3AA56B222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */; };
+		5D3AA56C222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */; };
+		5D3AA56D222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */; };
+		5D3AA56F222FDD4100CEE266 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */; };
+		5D3AA570222FDD4100CEE266 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */; };
+		5D3AA571222FDD4100CEE266 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */; };
+		5D3AA57222300F0200CEE266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5B221FF9B500663D37 /* AppDelegate.swift */; };
+		5D3AA57322300F0200CEE266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5B221FF9B500663D37 /* AppDelegate.swift */; };
 		5DCACC5C221FF9B500663D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5B221FF9B500663D37 /* AppDelegate.swift */; };
 		5DCACC5E221FF9B500663D37 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5D221FF9B500663D37 /* ImageSearchViewController.swift */; };
 		5DCACC61221FF9B500663D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DCACC5F221FF9B500663D37 /* Main.storyboard */; };
@@ -61,6 +83,12 @@
 		31E729C24BF7C3D1095691E5 /* Pods-ImageSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageSearchUITests/Pods-ImageSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4430A54C87FBBC334A3FC397 /* Pods_ImageSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DA867D342E626FB465334B /* Pods-ImageSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageSearch/Pods-ImageSearch.release.xcconfig"; sourceTree = "<group>"; };
+		5D3AA554222FD6F700CEE266 /* ImageSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSearchViewController.xib; sourceTree = "<group>"; };
+		5D3AA558222FD7F400CEE266 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		5D3AA55E222FD96B00CEE266 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
 		5DCACC58221FF9B500663D37 /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCACC5B221FF9B500663D37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DCACC5D221FF9B500663D37 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +145,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D3AA55C222FD94C00CEE266 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D3AA55D222FD95600CEE266 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5D3AA55D222FD95600CEE266 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5D3AA55E222FD96B00CEE266 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5D3AA563222FDCCE00CEE266 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5DCACC89221FFABD00663D37 /* Cell */,
+				5DCACC5D221FF9B500663D37 /* ImageSearchViewController.swift */,
+				5DCACC96221FFDAA00663D37 /* ImageSearchViewModel.swift */,
+				5D3AA554222FD6F700CEE266 /* ImageSearchViewController.xib */,
+				5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */,
+				5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */,
+				5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		5DCACC4F221FF9B500663D37 = {
 			isa = PBXGroup;
 			children = (
@@ -142,12 +200,12 @@
 		5DCACC5A221FF9B500663D37 /* ImageSearch */ = {
 			isa = PBXGroup;
 			children = (
+				5D3AA563222FDCCE00CEE266 /* Classes */,
+				5D3AA55C222FD94C00CEE266 /* Utils */,
 				5DCACC9A221FFDE100663D37 /* Remote */,
-				5DCACC89221FFABD00663D37 /* Cell */,
-				5DCACC5D221FF9B500663D37 /* ImageSearchViewController.swift */,
-				5DCACC96221FFDAA00663D37 /* ImageSearchViewModel.swift */,
-				5DCACC5F221FF9B500663D37 /* Main.storyboard */,
+				5D3AA558222FD7F400CEE266 /* LaunchScreenViewController.swift */,
 				5DCACC64221FF9B600663D37 /* LaunchScreen.storyboard */,
+				5DCACC5F221FF9B500663D37 /* Main.storyboard */,
 				5DCACC5B221FF9B500663D37 /* AppDelegate.swift */,
 				5DCACC67221FF9B600663D37 /* Info.plist */,
 				5DCACC62221FF9B600663D37 /* Assets.xcassets */,
@@ -349,9 +407,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DCACC66221FF9B600663D37 /* LaunchScreen.storyboard in Resources */,
+				5D3AA56F222FDD4100CEE266 /* ImageDetailViewController.xib in Resources */,
 				5DCACC8F221FFB0A00663D37 /* ImageCell.xib in Resources */,
 				5DCACC63221FF9B600663D37 /* Assets.xcassets in Resources */,
 				5DCACC61221FF9B500663D37 /* Main.storyboard in Resources */,
+				5D3AA555222FD6F700CEE266 /* ImageSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +419,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3AA556222FD6F700CEE266 /* ImageSearchViewController.xib in Resources */,
+				5D3AA570222FDD4100CEE266 /* ImageDetailViewController.xib in Resources */,
 				5DCACC90221FFB0A00663D37 /* ImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +429,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3AA557222FD6F700CEE266 /* ImageSearchViewController.xib in Resources */,
+				5D3AA571222FDD4100CEE266 /* ImageDetailViewController.xib in Resources */,
 				5DCACC91221FFB0A00663D37 /* ImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +469,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ImageSearch/Pods-ImageSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -412,6 +477,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -473,11 +539,15 @@
 			files = (
 				5DCACC5E221FF9B500663D37 /* ImageSearchViewController.swift in Sources */,
 				5DCACC5C221FF9B500663D37 /* AppDelegate.swift in Sources */,
+				5D3AA567222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */,
+				5D3AA56B222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */,
 				5DCACCA822202A1600663D37 /* UnsplashImageParser.swift in Sources */,
 				5DCACC93221FFB3200663D37 /* ImageCellViewModel.swift in Sources */,
 				5DCACCA322200CDE00663D37 /* ApiManager.swift in Sources */,
 				5DCACC9C221FFE1600663D37 /* UnsplashImage.swift in Sources */,
 				5DCACC8B221FFAD100663D37 /* ImageCell.swift in Sources */,
+				5D3AA559222FD7F400CEE266 /* LaunchScreenViewController.swift in Sources */,
+				5D3AA55F222FD96B00CEE266 /* UIViewController+Extension.swift in Sources */,
 				5DCACC97221FFDAA00663D37 /* ImageSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,10 +556,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3AA560222FD96B00CEE266 /* UIViewController+Extension.swift in Sources */,
 				5DCACC71221FF9B600663D37 /* ImageSearchTests.swift in Sources */,
+				5D3AA568222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */,
+				5D3AA56C222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */,
 				5DCACCA922202A1600663D37 /* UnsplashImageParser.swift in Sources */,
+				5D3AA55A222FD7F400CEE266 /* LaunchScreenViewController.swift in Sources */,
 				5DCACC9D221FFE1600663D37 /* UnsplashImage.swift in Sources */,
 				5DCACC8C221FFAD100663D37 /* ImageCell.swift in Sources */,
+				5D3AA57222300F0200CEE266 /* AppDelegate.swift in Sources */,
+				5D3AA564222FDCDD00CEE266 /* ImageSearchViewController.swift in Sources */,
 				5DCACC98221FFDAA00663D37 /* ImageSearchViewModel.swift in Sources */,
 				5DCACCA422200CDE00663D37 /* ApiManager.swift in Sources */,
 				5DCACC94221FFB3200663D37 /* ImageCellViewModel.swift in Sources */,
@@ -500,10 +576,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3AA561222FD96B00CEE266 /* UIViewController+Extension.swift in Sources */,
 				5DCACC7C221FF9B600663D37 /* ImageSearchUITests.swift in Sources */,
+				5D3AA569222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */,
+				5D3AA56D222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */,
 				5DCACCAA22202A1600663D37 /* UnsplashImageParser.swift in Sources */,
+				5D3AA55B222FD7F400CEE266 /* LaunchScreenViewController.swift in Sources */,
 				5DCACC9E221FFE1600663D37 /* UnsplashImage.swift in Sources */,
 				5DCACC8D221FFAD100663D37 /* ImageCell.swift in Sources */,
+				5D3AA57322300F0200CEE266 /* AppDelegate.swift in Sources */,
+				5D3AA565222FDCDD00CEE266 /* ImageSearchViewController.swift in Sources */,
 				5DCACC99221FFDAA00663D37 /* ImageSearchViewModel.swift in Sources */,
 				5DCACCA522200CDE00663D37 /* ApiManager.swift in Sources */,
 				5DCACC95221FFB3200663D37 /* ImageCellViewModel.swift in Sources */,
