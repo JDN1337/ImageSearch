@@ -26,6 +26,7 @@ class ImageSearchTests: XCTestCase {
         let guessId = "1337"
         let guessUrlString = "https://www.google.com"
         let guessDescription = "Description1234"
+        let guessNbLikes = 12
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -37,6 +38,7 @@ class ImageSearchTests: XCTestCase {
         jsonDic["id"] = guessId
         jsonDic["urls"] = ["regular" : guessUrlString]
         jsonDic["description"] = guessDescription
+        jsonDic["likes"] = guessNbLikes
 
         jsonDic["created_at"] = dateFormatter.string(from: guessCreatedAt!)
         jsonDic["updated_at"] = dateFormatter.string(from: guessUpdatedAt!)
@@ -47,6 +49,7 @@ class ImageSearchTests: XCTestCase {
             XCTAssertEqual(unsplashImage.id, guessId, "Id parsed from UnsplashImageParser is wrong")
             XCTAssertEqual(unsplashImage.urlString, guessUrlString, "UrlString parsed from UnsplashImageParser is wrong")
             XCTAssertEqual(unsplashImage.description, guessDescription, "Description parsed from UnsplashImageParser is wrong")
+            XCTAssertEqual(unsplashImage.nbLikes, guessNbLikes, "NbLikes parsed from UnsplashImageParser is wrong")
             XCTAssertEqual(unsplashImage.createdAt, guessCreatedAt, "CreatedAt parsed from UnsplashImageParser is wrong")
             XCTAssertEqual(unsplashImage.updatedAt, guessUpdatedAt, "UpdatedAt parsed from UnsplashImageParser is wrong")
         } else {
