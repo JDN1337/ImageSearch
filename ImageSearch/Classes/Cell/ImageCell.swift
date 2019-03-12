@@ -18,7 +18,6 @@ class ImageCell: UICollectionViewCell {
 
     static let nibName = "ImageCell"
     static let reuseIdentifier = "ImageCellReuseId"
-    static let baseImageViewHeroId = "imageViewHeroId"
 
     var presenter: UnsplashImagePresenter! {
         didSet {
@@ -35,6 +34,7 @@ class ImageCell: UICollectionViewCell {
     }
 
     private func config() {
+        self.imageView.image = self.presenter.defaultImage
         self.presenter.loadImage()
 
         self.imageView.hero.id = self.presenter.heroId

@@ -36,6 +36,7 @@ class ImageDetailViewController: UIViewController {
     }
 
     private func configUI() {
+        self.imageView.image = self.presenter.defaultImage
         self.presenter.loadImage()
 
         self.imageView.hero.id = self.presenter.heroId

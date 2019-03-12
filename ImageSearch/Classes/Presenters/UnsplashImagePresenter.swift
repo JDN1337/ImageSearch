@@ -18,6 +18,7 @@ class UnsplashImagePresenter {
     static let baseImageViewHeroId = "imageViewHeroId"
 
     let unsplashImage: UnsplashImage
+    let defaultImage = UIImage(named: "imageSearch")
     weak var delegate: UnsplashImagePresenterDelegate?
 
     init(unsplashImage: UnsplashImage) {
@@ -73,18 +74,27 @@ class UnsplashImagePresenter {
     }
 
     func loadImage() {
-        if let url = URL(string: self.unsplashImage.urlString) {
-            SDWebImageManager.shared().imageDownloader?.downloadImage(with: url, options: [], progress: nil, completed: { (imageLoaded, data, error, finished) in
-                if let image = imageLoaded {
-                    self.delegate?.imageLoaded(image)
-                } else {
-                    //Default image
-                    self.delegate?.imageLoaded(UIImage(named: "imageSearch"))
-                }
-            })
+        if let imageUrl = URL(string: self.unsplashImage.urlString) {
+            if let image = SDImageCache.shared().imageFromMemoryCache(forKey: imageUrl.absoluteString) {
+                //Get from memory cache
+                self.delegate?.imageLoaded(image)
+            } else if let image = SDImageCache.shared().imageFromDiskCache(forKey: imageUrl.absoluteString) {
+                //Get from Disk Cache
+                self.delegate?.imageLoaded(image)
+            } else {
+                //Download image
+                SDWebImageManager.shared().imageDownloader?.downloadImage(with: imageUrl, options: [], progress: nil, completed: { (imageLoaded, data, error, finished) in
+                    if let image = imageLoaded {
+                        //Cache downloaded image
+                        SDImageCache.shared().store(image, forKey: imageUrl.absoluteString)
+                        self.delegate?.imageLoaded(image)
+                    } else {
+                        self.delegate?.imageLoaded(self.defaultImage)
+                    }
+                })
+            }
         } else {
-            //Default image
-            self.delegate?.imageLoaded(UIImage(named: "imageSearch"))
+            self.delegate?.imageLoaded(self.defaultImage)
         }
     }
 }
