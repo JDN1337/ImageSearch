@@ -16,9 +16,7 @@ class ImageSearchViewController: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     var refreshControl = UIRefreshControl()
-    var viewModel = ImageSearchViewModel()
-
-    static var nbItemsByLine = CGFloat(2)
+    var presenter = UnsplashImageListPresenter()
 
     init() {
         super.init(nibName: ImageSearchViewController.nibName, bundle: Bundle.main)
@@ -55,24 +53,17 @@ class ImageSearchViewController: UIViewController {
         self.spinner.startAnimating()
         self.spinner.isHidden = false
 
-        self.viewModel.loadImagesWithText(self.searchBar.text) { [weak self] (success) in
-            if success {
-                //Reset emptyLabel
-                self?.emptyLabel.text = "Veuillez saisir une recherche..."
-                self?.emptyLabel.textColor = .darkGray
-            } else {
-                //Show error on emptyLabel
-                self?.emptyLabel.text = "Erreur lors du chargement des images."
-                self?.emptyLabel.textColor = .red
-            }
-
+        self.presenter.loadImagesWithText(self.searchBar.text) { [weak self] (success) in
             self?.refreshDisplay()
             self?.refreshControl.endRefreshing()
         }
     }
 
     private func refreshDisplay() {
-        if self.viewModel.images.isEmpty {
+        self.emptyLabel.text = self.presenter.emptyLabelText
+        self.emptyLabel.textColor = self.presenter.emptyLabelColor
+
+        if self.presenter.images.isEmpty {
             self.collectionView.isHidden = true
             self.emptyLabel.isHidden = false
         } else {
@@ -100,20 +91,16 @@ extension ImageSearchViewController: UISearchBarDelegate {
 extension ImageSearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        let margin = CGFloat(10.0)
-        let width = (collectionView.frame.size.width / ImageSearchViewController.nbItemsByLine) - margin
-
-        return CGSize(width: width, height: width)
+        return self.presenter.sizeForItem(for: collectionView)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.viewModel.images.count
+        return self.presenter.images.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.reuseIdentifier, for: indexPath) as? ImageCell {
-            cell.viewModel = ImageCellViewModel(unsplashImage: self.viewModel.images[indexPath.item])
+            cell.presenter = UnsplashImagePresenter(unsplashImage: self.presenter.images[indexPath.item])
             return cell
         }
 
@@ -124,8 +111,8 @@ extension ImageSearchViewController: UICollectionViewDelegate, UICollectionViewD
         collectionView.deselectItem(at: indexPath, animated: true)
 
         //Show detailVC
-        let imageDetailVM = ImageDetailViewModel(unsplashImage: self.viewModel.images[indexPath.item])
-        let imageDetailVC = ImageDetailViewController(viewModel: imageDetailVM)
+        let presenter = UnsplashImagePresenter(unsplashImage: self.presenter.images[indexPath.item])
+        let imageDetailVC = ImageDetailViewController(presenter: presenter)
         self.navigationController?.pushViewController(imageDetailVC, animated: true)
     }
 }

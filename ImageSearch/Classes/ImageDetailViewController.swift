@@ -13,13 +13,17 @@ class ImageDetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var nbLikesLabel: UILabel!
+    @IBOutlet weak var nbLikesHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var dateLabel: UILabel!
 
-    var viewModel: ImageDetailViewModel
+    var presenter: UnsplashImagePresenter
 
-    init(viewModel: ImageDetailViewModel) {
-        self.viewModel = viewModel
+    init(presenter: UnsplashImagePresenter) {
+        self.presenter = presenter
         super.init(nibName: ImageDetailViewController.nibName, bundle: Bundle.main)
+
+        self.presenter.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -32,15 +36,18 @@ class ImageDetailViewController: UIViewController {
     }
 
     private func configUI() {
-        self.imageView.hero.id = "\(ImageCell.baseImageViewHeroId)-\(self.viewModel.unsplashImage.id)"
+        self.presenter.loadImage()
 
-        if let url = URL(string: self.viewModel.unsplashImage.urlString) {
-            self.imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "imageSearch"))
-        } else {
-            self.imageView.image = UIImage(named: "imageSearch")
-        }
+        self.imageView.hero.id = self.presenter.heroId
+        self.descriptionLabel.text = self.presenter.description
+        self.dateLabel.text = self.presenter.updatedAt
+        self.nbLikesLabel.text = self.presenter.nbLikesText
+        self.nbLikesHeightConstraint.constant = self.presenter.nbLikesHeight
+    }
+}
 
-        self.descriptionLabel.text = self.viewModel.unsplashImage.description
-        self.dateLabel.text = self.viewModel.unsplashImage.updatedAtString
+extension ImageDetailViewController: UnsplashImagePresenterDelegate {
+    func imageLoaded(_ image: UIImage?) {
+        self.imageView.image = image
     }
 }

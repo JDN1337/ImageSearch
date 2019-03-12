@@ -12,30 +12,7 @@ class UnsplashImage {
     var id = ""
     var urlString = ""
     var description = ""
+    var nbLikes = 0
     var createdAt: Date?
     var updatedAt: Date?
-}
-
-extension UnsplashImage {
-    var createdAtString: String {
-        if let createdAt = self.createdAt {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd/MM/yyyy"
-
-            return dateFormatter.string(from: createdAt)
-        } else {
-            return ""
-        }
-    }
-
-    var updatedAtString: String {
-        if let updatedAt = self.updatedAt {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd/MM/yyyy"
-
-            return dateFormatter.string(from: updatedAt)
-        } else {
-            return ""
-        }
-    }
 }

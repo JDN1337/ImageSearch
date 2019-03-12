@@ -1,39 +1,38 @@
 //
-//  ImageSearchViewModel.swift
+//  UnsplashImageService.swift
 //  ImageSearch
 //
-//  Created by Jordan Lepretre on 22/02/2019.
+//  Created by Jordan Lepretre on 12/03/2019.
 //  Copyright © 2019 Jordan Lepretre. All rights reserved.
 //
 
 import Foundation
 import SwiftyJSON
 
-class ImageSearchViewModel {
-    var images = [UnsplashImage]()
+class UnsplashImageService {
 
-    func loadImagesWithText(_ searchText: String?, completion: @escaping (Bool) -> Void) {
+    static func loadImagesWithText(_ searchText: String?, completion: @escaping ([UnsplashImage], Bool) -> Void) {
+        var images = [UnsplashImage]()
+
         if let searchText = searchText {
             ApiManager.shared.getImagesWithText(searchText) { (data, error, _) in
-                self.images.removeAll()
-
                 if let error = error as NSError? {
                     print("GetImagesWithText - Error: \(error.localizedDescription)")
-                    completion(false)
+                    completion(images, false)
                 } else if let data = data {
                     do {
                         let json = try JSON(data: data, options: JSONSerialization.ReadingOptions.allowFragments)
-                        self.images = UnsplashImageParser.parseObjects(jsonDic: json["results"])
-                        completion(true)
+                        images = UnsplashImageParser.parseObjects(jsonDic: json["results"])
+                        completion(images, true)
                     } catch {
-                        completion(false)
+                        completion(images, false)
                     }
                 } else {
-                    completion(false)
+                    completion(images, false)
                 }
             }
         } else {
-            completion(true)
+            completion(images, true)
         }
     }
 }

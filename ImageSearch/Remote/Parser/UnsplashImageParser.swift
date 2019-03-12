@@ -38,6 +38,7 @@ class UnsplashImageParser {
         image.id = jsonDic["id"].stringValue
         image.urlString = jsonDic["urls"]["regular"].stringValue
         image.description = jsonDic["description"].stringValue
+        image.nbLikes = jsonDic["likes"].intValue
 
         //Dates
         let dateFormatter = DateFormatter()

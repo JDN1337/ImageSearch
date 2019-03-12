@@ -22,14 +22,20 @@
 		5D3AA567222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */; };
 		5D3AA568222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */; };
 		5D3AA569222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */; };
-		5D3AA56B222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */; };
-		5D3AA56C222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */; };
-		5D3AA56D222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */; };
 		5D3AA56F222FDD4100CEE266 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */; };
 		5D3AA570222FDD4100CEE266 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */; };
 		5D3AA571222FDD4100CEE266 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */; };
 		5D3AA57222300F0200CEE266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5B221FF9B500663D37 /* AppDelegate.swift */; };
 		5D3AA57322300F0200CEE266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5B221FF9B500663D37 /* AppDelegate.swift */; };
+		5D5305372238102500E702AD /* UnsplashImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5305362238102500E702AD /* UnsplashImageService.swift */; };
+		5D5305382238102500E702AD /* UnsplashImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5305362238102500E702AD /* UnsplashImageService.swift */; };
+		5D5305392238102500E702AD /* UnsplashImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5305362238102500E702AD /* UnsplashImageService.swift */; };
+		5D53053B2238115600E702AD /* UnsplashImageListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D53053A2238115600E702AD /* UnsplashImageListPresenter.swift */; };
+		5D53053C2238115600E702AD /* UnsplashImageListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D53053A2238115600E702AD /* UnsplashImageListPresenter.swift */; };
+		5D53053D2238115600E702AD /* UnsplashImageListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D53053A2238115600E702AD /* UnsplashImageListPresenter.swift */; };
+		5D9E9FB82236C7CB0051C22F /* UnsplashImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E9FB72236C7CB0051C22F /* UnsplashImagePresenter.swift */; };
+		5D9E9FB92236C7CB0051C22F /* UnsplashImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E9FB72236C7CB0051C22F /* UnsplashImagePresenter.swift */; };
+		5D9E9FBA2236C7CB0051C22F /* UnsplashImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E9FB72236C7CB0051C22F /* UnsplashImagePresenter.swift */; };
 		5DCACC5C221FF9B500663D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5B221FF9B500663D37 /* AppDelegate.swift */; };
 		5DCACC5E221FF9B500663D37 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC5D221FF9B500663D37 /* ImageSearchViewController.swift */; };
 		5DCACC61221FF9B500663D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DCACC5F221FF9B500663D37 /* Main.storyboard */; };
@@ -43,12 +49,6 @@
 		5DCACC8F221FFB0A00663D37 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCACC8E221FFB0A00663D37 /* ImageCell.xib */; };
 		5DCACC90221FFB0A00663D37 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCACC8E221FFB0A00663D37 /* ImageCell.xib */; };
 		5DCACC91221FFB0A00663D37 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCACC8E221FFB0A00663D37 /* ImageCell.xib */; };
-		5DCACC93221FFB3200663D37 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC92221FFB3200663D37 /* ImageCellViewModel.swift */; };
-		5DCACC94221FFB3200663D37 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC92221FFB3200663D37 /* ImageCellViewModel.swift */; };
-		5DCACC95221FFB3200663D37 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC92221FFB3200663D37 /* ImageCellViewModel.swift */; };
-		5DCACC97221FFDAA00663D37 /* ImageSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC96221FFDAA00663D37 /* ImageSearchViewModel.swift */; };
-		5DCACC98221FFDAA00663D37 /* ImageSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC96221FFDAA00663D37 /* ImageSearchViewModel.swift */; };
-		5DCACC99221FFDAA00663D37 /* ImageSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC96221FFDAA00663D37 /* ImageSearchViewModel.swift */; };
 		5DCACC9C221FFE1600663D37 /* UnsplashImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC9B221FFE1600663D37 /* UnsplashImage.swift */; };
 		5DCACC9D221FFE1600663D37 /* UnsplashImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC9B221FFE1600663D37 /* UnsplashImage.swift */; };
 		5DCACC9E221FFE1600663D37 /* UnsplashImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCACC9B221FFE1600663D37 /* UnsplashImage.swift */; };
@@ -87,8 +87,10 @@
 		5D3AA558222FD7F400CEE266 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		5D3AA55E222FD96B00CEE266 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
-		5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
 		5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
+		5D5305362238102500E702AD /* UnsplashImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImageService.swift; sourceTree = "<group>"; };
+		5D53053A2238115600E702AD /* UnsplashImageListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImageListPresenter.swift; sourceTree = "<group>"; };
+		5D9E9FB72236C7CB0051C22F /* UnsplashImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImagePresenter.swift; sourceTree = "<group>"; };
 		5DCACC58221FF9B500663D37 /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCACC5B221FF9B500663D37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DCACC5D221FF9B500663D37 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
@@ -104,8 +106,6 @@
 		5DCACC7D221FF9B600663D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DCACC8A221FFAD100663D37 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		5DCACC8E221FFB0A00663D37 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
-		5DCACC92221FFB3200663D37 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
-		5DCACC96221FFDAA00663D37 /* ImageSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewModel.swift; sourceTree = "<group>"; };
 		5DCACC9B221FFE1600663D37 /* UnsplashImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImage.swift; sourceTree = "<group>"; };
 		5DCACCA222200CDE00663D37 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		5DCACCA722202A1600663D37 /* UnsplashImageParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImageParser.swift; sourceTree = "<group>"; };
@@ -164,15 +164,32 @@
 		5D3AA563222FDCCE00CEE266 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5D53053522380F2000E702AD /* Services */,
+				5D9E9FB62236C7B00051C22F /* Presenters */,
 				5DCACC89221FFABD00663D37 /* Cell */,
 				5DCACC5D221FF9B500663D37 /* ImageSearchViewController.swift */,
-				5DCACC96221FFDAA00663D37 /* ImageSearchViewModel.swift */,
 				5D3AA554222FD6F700CEE266 /* ImageSearchViewController.xib */,
 				5D3AA566222FDD2D00CEE266 /* ImageDetailViewController.swift */,
-				5D3AA56A222FDD3700CEE266 /* ImageDetailViewModel.swift */,
 				5D3AA56E222FDD4100CEE266 /* ImageDetailViewController.xib */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		5D53053522380F2000E702AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5D5305362238102500E702AD /* UnsplashImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5D9E9FB62236C7B00051C22F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				5D9E9FB72236C7CB0051C22F /* UnsplashImagePresenter.swift */,
+				5D53053A2238115600E702AD /* UnsplashImageListPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		5DCACC4F221FF9B500663D37 = {
@@ -235,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				5DCACC8A221FFAD100663D37 /* ImageCell.swift */,
-				5DCACC92221FFB3200663D37 /* ImageCellViewModel.swift */,
 				5DCACC8E221FFB0A00663D37 /* ImageCell.xib */,
 			);
 			path = Cell;
@@ -538,17 +554,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DCACC5E221FF9B500663D37 /* ImageSearchViewController.swift in Sources */,
+				5D5305372238102500E702AD /* UnsplashImageService.swift in Sources */,
+				5D53053B2238115600E702AD /* UnsplashImageListPresenter.swift in Sources */,
 				5DCACC5C221FF9B500663D37 /* AppDelegate.swift in Sources */,
 				5D3AA567222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */,
-				5D3AA56B222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */,
 				5DCACCA822202A1600663D37 /* UnsplashImageParser.swift in Sources */,
-				5DCACC93221FFB3200663D37 /* ImageCellViewModel.swift in Sources */,
+				5D9E9FB82236C7CB0051C22F /* UnsplashImagePresenter.swift in Sources */,
 				5DCACCA322200CDE00663D37 /* ApiManager.swift in Sources */,
 				5DCACC9C221FFE1600663D37 /* UnsplashImage.swift in Sources */,
 				5DCACC8B221FFAD100663D37 /* ImageCell.swift in Sources */,
 				5D3AA559222FD7F400CEE266 /* LaunchScreenViewController.swift in Sources */,
 				5D3AA55F222FD96B00CEE266 /* UIViewController+Extension.swift in Sources */,
-				5DCACC97221FFDAA00663D37 /* ImageSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,16 +575,16 @@
 				5D3AA560222FD96B00CEE266 /* UIViewController+Extension.swift in Sources */,
 				5DCACC71221FF9B600663D37 /* ImageSearchTests.swift in Sources */,
 				5D3AA568222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */,
-				5D3AA56C222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */,
 				5DCACCA922202A1600663D37 /* UnsplashImageParser.swift in Sources */,
 				5D3AA55A222FD7F400CEE266 /* LaunchScreenViewController.swift in Sources */,
 				5DCACC9D221FFE1600663D37 /* UnsplashImage.swift in Sources */,
 				5DCACC8C221FFAD100663D37 /* ImageCell.swift in Sources */,
 				5D3AA57222300F0200CEE266 /* AppDelegate.swift in Sources */,
 				5D3AA564222FDCDD00CEE266 /* ImageSearchViewController.swift in Sources */,
-				5DCACC98221FFDAA00663D37 /* ImageSearchViewModel.swift in Sources */,
+				5D9E9FB92236C7CB0051C22F /* UnsplashImagePresenter.swift in Sources */,
 				5DCACCA422200CDE00663D37 /* ApiManager.swift in Sources */,
-				5DCACC94221FFB3200663D37 /* ImageCellViewModel.swift in Sources */,
+				5D5305382238102500E702AD /* UnsplashImageService.swift in Sources */,
+				5D53053C2238115600E702AD /* UnsplashImageListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,16 +595,16 @@
 				5D3AA561222FD96B00CEE266 /* UIViewController+Extension.swift in Sources */,
 				5DCACC7C221FF9B600663D37 /* ImageSearchUITests.swift in Sources */,
 				5D3AA569222FDD2D00CEE266 /* ImageDetailViewController.swift in Sources */,
-				5D3AA56D222FDD3700CEE266 /* ImageDetailViewModel.swift in Sources */,
 				5DCACCAA22202A1600663D37 /* UnsplashImageParser.swift in Sources */,
 				5D3AA55B222FD7F400CEE266 /* LaunchScreenViewController.swift in Sources */,
 				5DCACC9E221FFE1600663D37 /* UnsplashImage.swift in Sources */,
 				5DCACC8D221FFAD100663D37 /* ImageCell.swift in Sources */,
 				5D3AA57322300F0200CEE266 /* AppDelegate.swift in Sources */,
 				5D3AA565222FDCDD00CEE266 /* ImageSearchViewController.swift in Sources */,
-				5DCACC99221FFDAA00663D37 /* ImageSearchViewModel.swift in Sources */,
+				5D9E9FBA2236C7CB0051C22F /* UnsplashImagePresenter.swift in Sources */,
 				5DCACCA522200CDE00663D37 /* ApiManager.swift in Sources */,
-				5DCACC95221FFB3200663D37 /* ImageCellViewModel.swift in Sources */,
+				5D5305392238102500E702AD /* UnsplashImageService.swift in Sources */,
+				5D53053D2238115600E702AD /* UnsplashImageListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
